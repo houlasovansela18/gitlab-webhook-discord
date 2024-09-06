@@ -1,0 +1,10 @@
+version: "3"
+services:
+  gitlab-webhook:
+    build: .
+    container_name: gitlab-webhook
+    environment:
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    ports:
+      - "4455:4455"
+    restart: always
